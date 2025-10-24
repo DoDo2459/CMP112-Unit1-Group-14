@@ -6,7 +6,7 @@ public class enemyMovement : MonoBehaviour
 {
 
     public float speed;
-    private float direction = -1;
+    private float direction;
 
     private Rigidbody2D rb;
     // Start is called once before the first execution of Update after the MonoBehaviour is created

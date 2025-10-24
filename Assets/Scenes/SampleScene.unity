@@ -763,7 +763,7 @@ Transform:
   m_GameObject: {fileID: 583202361}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.21202, y: -1.94683, z: 0}
+  m_LocalPosition: {x: 0.51, y: -3.29, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1283,7 +1283,7 @@ Transform:
   m_GameObject: {fileID: 980025873}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.84, y: -0.69, z: 0}
+  m_LocalPosition: {x: 2.26, y: -2.69, z: 0}
   m_LocalScale: {x: 0.889654, y: 1.93281, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1543,8 +1543,8 @@ Transform:
   m_GameObject: {fileID: 1217676342}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.1, y: -9.2, z: 0}
-  m_LocalScale: {x: 3.8204598, y: 14.709504, z: 1}
+  m_LocalPosition: {x: 12.5286, y: -9.4044, z: 0}
+  m_LocalScale: {x: 4.677771, y: 14.583321, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1562,8 +1562,9 @@ GameObject:
   - component: {fileID: 1453987607}
   - component: {fileID: 1453987606}
   - component: {fileID: 1453987608}
+  - component: {fileID: 1453987609}
   m_Layer: 0
-  m_Name: Circle (1)
+  m_Name: Coin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1722,6 +1723,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 110cb9870f49a9c419a7dcad435deccf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1453987609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1453987603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5d52cc5b3d035f459c49f04a28f6b4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1511375194
@@ -2171,6 +2184,7 @@ GameObject:
   - component: {fileID: 2030139925}
   - component: {fileID: 2030139927}
   - component: {fileID: 2030139928}
+  - component: {fileID: 2030139929}
   m_Layer: 0
   m_Name: player
   m_TagString: Untagged
@@ -2321,6 +2335,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &2030139929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2030139924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99c4ea0f39adc5b4a8f25168cdf4b246, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2084360811
 GameObject:
   m_ObjectHideFlags: 0
