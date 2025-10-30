@@ -22,7 +22,7 @@ public class PlayerMove : MonoBehaviour
         float moveHorizontal = Input.GetAxis("Horizontal");
         Vector2 movement = new Vector2(moveHorizontal, 0);
         rb.AddForce(movement * speed);
-        if (Keyboard.current.spaceKey.isPressed || Keyboard.current.wKey.isPressed && isGrounded)
+        if (Keyboard.current.wKey.isPressed && isGrounded)
         {
             Debug.Log("Jump");
             Vector2 jump = new Vector2 (0, jumpForce);

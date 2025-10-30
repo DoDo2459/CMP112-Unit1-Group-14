@@ -14,9 +14,18 @@ public class coinDestroy : MonoBehaviour
         
     }
 
-    private void OnCollisionEnter2D(Collision other)
+    //Destroy coin upon player trigger collision
+    private void OnTriggerEnter2D(Collider2D other)
+
     {
-        Destroy(gameObject);
+
+        if (other.CompareTag("Player"))
+        {
+
+            Destroy(gameObject);
+
+        }
+
     }
 
 }
