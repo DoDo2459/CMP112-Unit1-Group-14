@@ -1,7 +1,10 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class coinDestroy : MonoBehaviour
 {
+    private static int score;
+    public Text scoreUI;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -23,6 +26,9 @@ public class coinDestroy : MonoBehaviour
         {
 
             Destroy(gameObject);
+            //update score
+            score++;
+            scoreUI.text = score.ToString();
 
         }
 
