@@ -1,8 +1,6 @@
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
-
-
 public class PlayerMove : MonoBehaviour
 {
     private bool isGrounded = false;
@@ -12,10 +10,9 @@ public class PlayerMove : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+
         rb = GetComponent<Rigidbody2D>();
     }
-
     // Update is called once per frame
     void FixedUpdate()
     {
@@ -27,7 +24,7 @@ public class PlayerMove : MonoBehaviour
         if (Keyboard.current.wKey.isPressed && isGrounded)
         {
             Debug.Log("Jump");
-            Vector2 jump = new Vector2 (0, jumpForce);
+            Vector2 jump = new Vector2(0, jumpForce);
             rb.AddForce(jump, ForceMode2D.Impulse);
         }
     }
@@ -49,5 +46,5 @@ public class PlayerMove : MonoBehaviour
             isGrounded = false;
         }
     }
-
 }
+
