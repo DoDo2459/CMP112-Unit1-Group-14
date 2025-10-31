@@ -19,9 +19,11 @@ public class PlayerMove : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        //horizontal movement
         float moveHorizontal = Input.GetAxis("Horizontal");
         Vector2 movement = new Vector2(moveHorizontal, 0);
         rb.AddForce(movement * speed);
+        //jumping
         if (Keyboard.current.wKey.isPressed && isGrounded)
         {
             Debug.Log("Jump");
@@ -29,6 +31,7 @@ public class PlayerMove : MonoBehaviour
             rb.AddForce(jump, ForceMode2D.Impulse);
         }
     }
+    //detect player is on ground
     void OnCollisionEnter2D(Collision2D collision)
     {
         Debug.Log("collision");
@@ -38,6 +41,7 @@ public class PlayerMove : MonoBehaviour
             Debug.Log("Grounded is true");
         }
     }
+    //check if player has left ground
     void OnCollisionExit2D(Collision2D collision)
     {
         if (collision.gameObject.layer == 8 && isGrounded)
