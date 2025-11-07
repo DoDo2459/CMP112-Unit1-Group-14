@@ -9,6 +9,7 @@ TagManager:
   - Coin
   - Manager
   - Win
+  - Background_Sound
   layers:
   - Default
   - TransparentFX
