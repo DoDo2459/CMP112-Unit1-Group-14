@@ -4,10 +4,17 @@ using UnityEngine;
 public class coinDestroy : MonoBehaviour
 {
     private static int score;
+
+    //Audio variables
+    private AudioSource source;
+    public AudioClip CoinSound;
+
     public GameManager manager;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        source = GetComponent<AudioSource>();
         manager = GameObject.FindGameObjectWithTag("Manager").GetComponent<GameManager>();
     }
 
@@ -25,8 +32,10 @@ public class coinDestroy : MonoBehaviour
         if (other.CompareTag("Player"))
         {
 
+            source.PlayOneShot(CoinSound, 1.0f);
             Destroy(gameObject);
             manager.addscore(1);
+
 
         }
 
