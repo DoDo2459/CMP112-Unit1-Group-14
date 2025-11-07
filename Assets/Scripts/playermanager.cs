@@ -3,6 +3,7 @@ using UnityEngine;
 public class playermanager : MonoBehaviour
 {
     public GameManager manager;
+    public int winScore;
     
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -33,6 +34,7 @@ public class playermanager : MonoBehaviour
         if (collision.gameObject.CompareTag("Win"))
         {
             manager.gameWinScreenOn();
+            manager.addscore(winScore);
             Debug.Log("Player win");
             Destroy(gameObject);
         }
