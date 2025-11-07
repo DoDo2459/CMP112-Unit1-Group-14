@@ -1,14 +1,14 @@
 using UnityEngine;
-using UnityEngine.UI;
+
 
 public class coinDestroy : MonoBehaviour
 {
     private static int score;
-    public Text scoreUI;
+    public GameManager manager;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        manager = GameObject.FindGameObjectWithTag("Manager").GetComponent<GameManager>();
     }
 
     // Update is called once per frame
@@ -26,9 +26,7 @@ public class coinDestroy : MonoBehaviour
         {
 
             Destroy(gameObject);
-            //update score
-            score++;
-            scoreUI.text = score.ToString();
+            manager.addscore(1);
 
         }
 
