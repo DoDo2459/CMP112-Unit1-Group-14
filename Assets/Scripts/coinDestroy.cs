@@ -17,7 +17,7 @@ public class coinDestroy : MonoBehaviour
         
     }
 
-    //Destroy coin upon player trigger collision
+    //Destroy coin upon player trigger collision and call add score function
     private void OnTriggerEnter2D(Collider2D other)
 
     {

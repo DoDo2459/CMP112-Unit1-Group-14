@@ -18,7 +18,7 @@ public class playerDie : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-
+        //kills player and calls game over screen
         if (collision.gameObject.CompareTag("Enemy") || collision.gameObject.CompareTag("Spike"))
         {
 
@@ -27,6 +27,7 @@ public class playerDie : MonoBehaviour
             Destroy(gameObject);
 
         }
+        //kills player and call game win screen
         if (collision.gameObject.CompareTag("Win"))
         {
             manager.gameWinScreenOn();

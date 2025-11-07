@@ -8,10 +8,7 @@ public class GameManager : MonoBehaviour
     public GameObject gameOverScreen;
     public GameObject gameWinScreen;
 
-    private void Start()
-    {
-        playerScore = 0;
-    }
+   //score keeper
     public void addscore(int scoretoAdd)
     {
         playerScore = playerScore + scoretoAdd;
@@ -19,15 +16,18 @@ public class GameManager : MonoBehaviour
         
     }
     
+    //initialize game over screen
     public void gameOverScreenOn()
     {
         Debug.Log("PlayerGameOver");
         gameOverScreen.SetActive(true);
     }
+    //initialize win game screen
     public void gameWinScreenOn()
     { 
         gameWinScreen.SetActive(true);
     }
+    //restarts game
     public void restartgame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
