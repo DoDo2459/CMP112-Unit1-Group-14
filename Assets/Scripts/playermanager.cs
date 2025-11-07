@@ -8,6 +8,7 @@ public class playerDie : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        //find game manager object
         manager = GameObject.FindGameObjectWithTag("Manager").GetComponent<GameManager>();
     }
 
@@ -25,6 +26,7 @@ public class playerDie : MonoBehaviour
             manager.gameOverScreenOn();
             Debug.Log("Player died!");
             Destroy(gameObject);
+            
 
         }
         //kills player and call game win screen
