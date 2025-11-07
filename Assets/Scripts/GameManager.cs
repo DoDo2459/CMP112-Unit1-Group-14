@@ -7,8 +7,13 @@ public class GameManager : MonoBehaviour
     public Text scoreText;
     public GameObject gameOverScreen;
     public GameObject gameWinScreen;
+    
 
-   //score keeper
+    void Start()
+    {
+        
+    }
+    //score keeper
     public void addscore(int scoretoAdd)
     {
         playerScore = playerScore + scoretoAdd;

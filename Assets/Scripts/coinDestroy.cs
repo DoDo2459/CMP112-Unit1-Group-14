@@ -8,6 +8,7 @@ public class coinDestroy : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        //find game manager object
         manager = GameObject.FindGameObjectWithTag("Manager").GetComponent<GameManager>();
     }
 
